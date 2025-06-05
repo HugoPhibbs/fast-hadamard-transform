@@ -6,6 +6,35 @@ Features:
 
 ## How to use
 
+### CMake
+
+- Config with:
+
+```bash
+mkdir build
+cmake -S . -B build
+```
+
+- Then run with:
+
+```bash
+cmake --build build
+```
+
+- To include into your project:
+
+```cmake
+CPMAddPackage(
+  NAME fht_cuda
+  GITHUB_REPOSITORY HugoPhibbs/fast-hadamard-transform
+  GIT_TAG master
+)
+
+target_link_libraries(my_lib PUBLIC fht_cuda)
+```
+
+### Python
+
 ```
 from fast_hadamard_transform import hadamard_transform
 ```
