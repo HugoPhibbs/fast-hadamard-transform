@@ -15,13 +15,15 @@ mkdir build
 cmake -S . -B build
 ```
 
-- Then run with:
+- Then build with:
 
 ```bash
 cmake --build build
 ```
 
-- To include into your project:
+#### Including into your project
+
+- To otherwise integrate into your project:
 
 ```cmake
 CPMAddPackage(
