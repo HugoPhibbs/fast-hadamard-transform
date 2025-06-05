@@ -15,7 +15,7 @@ find_package(Torch REQUIRED)
 set(Python3_EXECUTABLE "/usr/bin/python3")
 find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-file(GLOB SOURCES "${CMAKE_SOURCE_DIR}/csrc/*.cpp" "${CMAKE_SOURCE_DIR}/csrc/*.cu")
+file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/csrc/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/csrc/*.cu")
 
 add_library(fht_cuda STATIC
     ${SOURCES}
